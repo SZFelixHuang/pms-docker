@@ -1,0 +1,10 @@
+From ubuntu:18.10
+
+MAINTAINER Felix <felix_huang@outlook.com>
+
+COPY ./PMS-ENV/bin/jdk-11.0.1_linux /pms/bin/jdk-11.0.1_linux
+COPY ./PMS-ENV/bin/wildfly-15.0.0.Final /pms/bin/wildfly-15.0.0.Final
+COPY ./PMS-ENV/pms.biz /pms/pms.biz
+COPY ./PMS-ENV/pms-biz.sh /pms/pms-biz.sh
+
+CMD ["/bin/bash", "/pms/pms-biz.sh", "/pms"]
